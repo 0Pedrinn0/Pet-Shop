@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro - Amigo Fiel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Cadastro de Cliente e Pet</h1>
+    <form id="cadastro-form">
+      <fieldset>
+        <legend>Dados do Dono</legend>
+        <label>Nome Completo:<input type="text" name="nome_completo" required></label>
+        <label>CPF:<input type="text" name="cpf" required maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"></label>
+        <label>Email:<input type="email" name="email" required></label>
+        <label>Telefone:<input type="tel" name="telefone" required></label>
+        <label>Endereço:<input type="text" name="endereco" required></label>
+      </fieldset>
+      <fieldset>
+        <legend>Dados do Pet</legend>
+        <label>Nome do Pet:<input type="text" name="nome_pet" required></label>
+        <label>Espécie:
+          <select name="especie" required>
+            <option value="">Selecione</option>
+            <option value="Cão">Cão</option>
+            <option value="Gato">Gato</option>
+            <option value="Pássaro">Pássaro</option>
+            <option value="Outro">Outro</option>
+          </select>
+        </label>
+        <label>Raça:<input type="text" name="raca" required></label>
+        <label>Data de Nascimento:<input type="date" name="data_nascimento" required></label>
+        <label>Observações:<textarea name="observacoes" rows="2"></textarea></label>
+      </fieldset>
+      <button type="submit">Cadastrar</button>
+    </form>
+    <div id="mensagem"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
